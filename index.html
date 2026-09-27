@@ -3,215 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>SOLESPACE - Shop</title>
+    <title>Mini Shopee - Katalog</title>
 
     <link rel="stylesheet" href="style.css">
-
     <script src="js/products.js" defer></script>
 </head>
 
 <body>
 
-    <!-- ========================= 
-         ANNOUNCEMENT
-    ========================== -->
-
-    <div class="announcement">
-        FREE SHIPPING ON SELECTED ORDERS
-    </div>
-
-
-    <!-- =========================
-         NAVBAR
-    ========================== -->
-
+    <!-- navbar -->
     <header class="navbar">
 
-        <a href="index.html" class="logo">
-            SOLE<span>SPACE</span>
-        </a>
+        <div class="logo">Mini Shopee</div>
 
-        <nav class="main-nav">
-            <a href="#products">NEW ARRIVALS</a>
-            <a href="#products">MEN</a>
-            <a href="#products">WOMEN</a>
-            <a href="#products">SPORTSWEAR</a>
-        </nav>
+        <div class="nav-search">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Cari produk atau kategori..."
+            >
+        </div>
 
         <div class="nav-actions">
 
-            <div class="nav-search">
-                <span>⌕</span>
-
-                <input
-                    type="text"
-                    id="searchInput"
-                    placeholder="Search products..."
-                >
-            </div>
+            <span id="userName" class="user-name">Halo, Shopper</span>
 
             <button id="cartButton" class="cart-button">
-                BAG
+                Keranjang
                 <span id="cartCount">0</span>
             </button>
 
             <button id="logoutButton" class="logout-button">
-                LOG OUT
+                Keluar
             </button>
 
         </div>
 
     </header>
 
-
-    <!-- =========================
-         HERO
-    ========================== -->
-
-    <section class="hero">
-
-        <div class="hero-content">
-
-            <p class="hero-eyebrow">
-                THE LATEST DROP
-            </p>
-
-            <h1>
-                FIND YOUR<br>
-                NEXT FAVORITE.
-            </h1>
-
-            <p>
-                Sneakers, streetwear and everyday essentials
-                for every move you make.
-            </p>
-
-            <a href="#products" class="hero-button">
-                SHOP NOW
-            </a>
-
-        </div>
-
-    </section>
-
-
-    <!-- =========================
-         WELCOME
-    ========================== -->
-
-    <section class="welcome-section">
-
-        <div>
-            <p class="section-label">YOUR SOLESPACE</p>
-
-            <h2>
-                Welcome, <span id="userName">Shopper</span>
-            </h2>
-        </div>
-
-        <p class="welcome-text">
-            Explore our latest collection and find something
-            that fits your style.
-        </p>
-
-    </section>
-
-
-    <!-- =========================
-         PRODUCTS
-    ========================== -->
-
+    <!-- products -->
     <main id="products" class="products-section">
 
         <div class="section-header">
 
-            <div>
-                <p class="section-label">SHOP COLLECTION</p>
-
-                <h2>All Products</h2>
-            </div>
+            <h2>Semua Produk</h2>
 
             <div class="product-controls">
 
                 <select id="categoryFilter">
-                    <option value="all">All Categories</option>
+                    <option value="all">Semua Kategori</option>
                 </select>
 
                 <select id="sortSelect">
-                    <option value="default">Sort By</option>
-                    <option value="price-low">Price: Low to High</option>
-                    <option value="price-high">Price: High to Low</option>
-                    <option value="rating-high">Rating: High to Low</option>
+                    <option value="default">Urutkan</option>
+                    <option value="price-low">Harga: Rendah ke Tinggi</option>
+                    <option value="price-high">Harga: Tinggi ke Rendah</option>
+                    <option value="rating-high">Rating: Tinggi ke Rendah</option>
                 </select>
 
             </div>
 
         </div>
 
-
-        <!-- GLOBAL ERROR -->
-
+        <!-- eror -->
         <div id="globalError" class="global-error">
-            Something went wrong while loading products.
+            Terjadi kesalahan saat memuat produk.
         </div>
 
-
-        <!-- LOADING -->
-
+        <!-- loading -->
         <div id="productLoading" class="product-loading">
-            Loading products...
+            Memuat produk...
         </div>
 
-
-        <!-- PRODUCT GRID -->
-
+        <!-- product grid  -->
         <div id="productGrid" class="product-grid">
 
-            <!--
-                JavaScript akan memasukkan product card
-                ke dalam bagian ini.
-            -->
+            <!-- JavaScript akan memasukkan product card di sini -->
 
         </div>
 
-
-        <!-- LOAD MORE -->
-
+        <!-- load more-->
         <div class="load-more-container">
 
             <button id="loadMoreButton" class="load-more-button">
-                LOAD MORE
+                Muat Lebih Banyak
             </button>
 
         </div>
 
     </main>
 
-
-    <!-- =========================
-         CART PANEL
-    ========================== -->
-
+    <!-- cart panel -->
     <aside id="cartPanel" class="cart-panel">
 
         <div class="cart-header">
-
-            <div>
-                <p class="section-label">YOUR BAG</p>
-                <h2>Shopping Bag</h2>
-            </div>
-
-            <button id="closeCartButton" class="close-button">
-                ×
-            </button>
-
+            <h2>Keranjang Belanja</h2>
+            <button id="closeCartButton" class="close-button">×</button>
         </div>
 
         <div id="cartItems" class="cart-items">
-
             <!-- JavaScript akan memasukkan item cart -->
-
         </div>
 
         <div class="cart-footer">
@@ -222,72 +113,34 @@
             </div>
 
             <button id="checkoutButton" class="checkout-button">
-                CHECKOUT
+                Checkout
             </button>
 
         </div>
 
     </aside>
 
-
-    <!-- =========================
-         CART OVERLAY
-    ========================== -->
-
+    <!-- cart overly -->
     <div id="cartOverlay" class="cart-overlay"></div>
 
-
-    <!-- =========================
-         PRODUCT DETAIL MODAL
-    ========================== -->
-
+    <!-- product detail modal -->
     <div id="productModal" class="modal">
 
         <div class="modal-content">
 
-            <button id="closeModalButton" class="modal-close">
-                ×
-            </button>
+            <button id="closeModalButton" class="modal-close">×</button>
 
             <div id="modalProductContent">
-
-                <!--
-                    JavaScript akan memasukkan
-                    detail produk di sini.
-                -->
-
+                <!-- JavaScript akan memasukkan detail produk di sini -->
             </div>
 
         </div>
 
     </div>
 
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
+    <!-- footer-->
     <footer class="footer">
-
-        <div class="footer-logo">
-            SOLE<span>SPACE</span>
-        </div>
-
-        <p>
-            FIND YOUR STYLE. MAKE YOUR MOVE.
-        </p>
-
-        <div class="footer-links">
-            <a href="#">About</a>
-            <a href="#">Help</a>
-            <a href="#">Terms</a>
-            <a href="#">Privacy</a>
-        </div>
-
-        <p class="copyright">
-            © 2026 SOLESPACE. All rights reserved.
-        </p>
-
+        <p>Mini Shopee &copy; 2026</p>
     </footer>
 
 </body>
