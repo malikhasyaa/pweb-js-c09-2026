@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SOLESPACE - Shop</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="js/products.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ========================= 
+         ANNOUNCEMENT
+    ========================== -->
+
+    <div class="announcement">
+        FREE SHIPPING ON SELECTED ORDERS
+    </div>
+
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <header class="navbar">
+
+        <a href="index.html" class="logo">
+            SOLE<span>SPACE</span>
+        </a>
+
+        <nav class="main-nav">
+            <a href="#products">NEW ARRIVALS</a>
+            <a href="#products">MEN</a>
+            <a href="#products">WOMEN</a>
+            <a href="#products">SPORTSWEAR</a>
+        </nav>
+
+        <div class="nav-actions">
+
+            <div class="nav-search">
+                <span>⌕</span>
+
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search products..."
+                >
+            </div>
+
+            <button id="cartButton" class="cart-button">
+                BAG
+                <span id="cartCount">0</span>
+            </button>
+
+            <button id="logoutButton" class="logout-button">
+                LOG OUT
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <p class="hero-eyebrow">
+                THE LATEST DROP
+            </p>
+
+            <h1>
+                FIND YOUR<br>
+                NEXT FAVORITE.
+            </h1>
+
+            <p>
+                Sneakers, streetwear and everyday essentials
+                for every move you make.
+            </p>
+
+            <a href="#products" class="hero-button">
+                SHOP NOW
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         WELCOME
+    ========================== -->
+
+    <section class="welcome-section">
+
+        <div>
+            <p class="section-label">YOUR SOLESPACE</p>
+
+            <h2>
+                Welcome, <span id="userName">Shopper</span>
+            </h2>
+        </div>
+
+        <p class="welcome-text">
+            Explore our latest collection and find something
+            that fits your style.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         PRODUCTS
+    ========================== -->
+
+    <main id="products" class="products-section">
+
+        <div class="section-header">
+
+            <div>
+                <p class="section-label">SHOP COLLECTION</p>
+
+                <h2>All Products</h2>
+            </div>
+
+            <div class="product-controls">
+
+                <select id="categoryFilter">
+                    <option value="all">All Categories</option>
+                </select>
+
+                <select id="sortSelect">
+                    <option value="default">Sort By</option>
+                    <option value="price-low">Price: Low to High</option>
+                    <option value="price-high">Price: High to Low</option>
+                    <option value="rating-high">Rating: High to Low</option>
+                </select>
+
+            </div>
+
+        </div>
+
+
+        <!-- GLOBAL ERROR -->
+
+        <div id="globalError" class="global-error">
+            Something went wrong while loading products.
+        </div>
+
+
+        <!-- LOADING -->
+
+        <div id="productLoading" class="product-loading">
+            Loading products...
+        </div>
+
+
+        <!-- PRODUCT GRID -->
+
+        <div id="productGrid" class="product-grid">
+
+            <!--
+                JavaScript akan memasukkan product card
+                ke dalam bagian ini.
+            -->
+
+        </div>
+
+
+        <!-- LOAD MORE -->
+
+        <div class="load-more-container">
+
+            <button id="loadMoreButton" class="load-more-button">
+                LOAD MORE
+            </button>
+
+        </div>
+
+    </main>
+
+
+    <!-- =========================
+         CART PANEL
+    ========================== -->
+
+    <aside id="cartPanel" class="cart-panel">
+
+        <div class="cart-header">
+
+            <div>
+                <p class="section-label">YOUR BAG</p>
+                <h2>Shopping Bag</h2>
+            </div>
+
+            <button id="closeCartButton" class="close-button">
+                ×
+            </button>
+
+        </div>
+
+        <div id="cartItems" class="cart-items">
+
+            <!-- JavaScript akan memasukkan item cart -->
+
+        </div>
+
+        <div class="cart-footer">
+
+            <div class="cart-total-row">
+                <span>Total</span>
+                <strong id="cartTotal">Rp0</strong>
+            </div>
+
+            <button id="checkoutButton" class="checkout-button">
+                CHECKOUT
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!-- =========================
+         CART OVERLAY
+    ========================== -->
+
+    <div id="cartOverlay" class="cart-overlay"></div>
+
+
+    <!-- =========================
+         PRODUCT DETAIL MODAL
+    ========================== -->
+
+    <div id="productModal" class="modal">
+
+        <div class="modal-content">
+
+            <button id="closeModalButton" class="modal-close">
+                ×
+            </button>
+
+            <div id="modalProductContent">
+
+                <!--
+                    JavaScript akan memasukkan
+                    detail produk di sini.
+                -->
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer class="footer">
+
+        <div class="footer-logo">
+            SOLE<span>SPACE</span>
+        </div>
+
+        <p>
+            FIND YOUR STYLE. MAKE YOUR MOVE.
+        </p>
+
+        <div class="footer-links">
+            <a href="#">About</a>
+            <a href="#">Help</a>
+            <a href="#">Terms</a>
+            <a href="#">Privacy</a>
+        </div>
+
+        <p class="copyright">
+            © 2026 SOLESPACE. All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
+</html>
